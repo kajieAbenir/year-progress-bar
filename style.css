@@ -1,0 +1,80 @@
+:root {
+  --bg-color: #f7f7f7;
+  --card-bg: #ffffff;
+  --text-color: #000000;
+  --primary-color: #1900ff;
+  --track-color: #555555;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 30px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 550px;
+}
+
+.year-display {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  letter-spacing: -0.05em;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+  background-color: var(--track-color);
+  border-radius: 999px;
+  height: 24px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 2px solid var(--track-color);
+}
+
+#progress-fill {
+  background: linear-gradient(90deg, #00a108, #66ff66);
+  height: 100%;
+  width: 0%; /* Initial state */
+  transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 999px;
+}
+
+#percentage-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.sub-text {
+  margin-top: 1rem;
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.watermark {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Centers it perfectly */
+  opacity: 0.3; /* Makes it subtle */
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  /* pointer-events: none; User can click "through" it */
+  white-space: nowrap;
+}
